@@ -1,7 +1,10 @@
 addons:
   apt:
     packages:
+    - gnupg
+    - gnupg2
     - graphviz
+    - openssl
 before_install:
 - wget https://archive.apache.org/dist/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.zip
 - unzip -qq apache-maven-3.3.9-bin.zip
@@ -14,7 +17,7 @@ branches:
   - /^feature\/.*$/
   - /^hotfix\/.*$/
   - /^release\/.*$/
-  - /^v\d+\.\d+(\.\d+)?(-\S*)?$/
+  - /^v\d+\.\d+(\.\d+)?(-\S*)?/
 cache:
   directories:
   - "$HOME/.cache"
