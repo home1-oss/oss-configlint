@@ -20,8 +20,8 @@ branches:
   - /^v\d+\.\d+(\.\d+)?(-\S*)?/
 cache:
   directories:
-  - "$HOME/.m2"
   - "$HOME/.cache"
+  - "$HOME/.m2"
   - "$HOME/.sonar/cache"
 
 env:
@@ -52,7 +52,7 @@ before_deploy:
 deploy:
   provider: releases
   api_key: $GITHUB_GIT_SERVICE_TOKEN
-  file: "target/oss-configlint-${PROJECT_MAVEN_VERSION}-exec.jar"
+  file: "target/oss-configlint-${PROJECT_MAVEN_VERSION}.jar"
   skip_cleanup: true
   on:
     tags: true
