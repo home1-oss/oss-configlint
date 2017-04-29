@@ -20,8 +20,8 @@ branches:
   - /^v\d+\.\d+(\.\d+)?(-\S*)?/
 cache:
   directories:
-  - "$HOME/.cache"
   - "$HOME/.m2"
+  - "$HOME/.cache"
   - "$HOME/.sonar/cache"
 
 env:
@@ -40,8 +40,10 @@ jdk:
 - oraclejdk8
 language: java
 script:
-- echo "on_every_push"
 - bash ci.sh analysis && bash ci.sh test_and_build && bash ci.sh publish_snapshot && bash ci.sh publish_maven_site
+services:
+- docker
+sudo: required
 
 # v is refered to gitflow-maven-plugin:versionTagPrefix
 before_deploy:
@@ -50,14 +52,10 @@ before_deploy:
 deploy:
   provider: releases
   api_key: $GITHUB_GIT_SERVICE_TOKEN
-  file: "target/oss-configlint-${PROJECT_MAVEN_VERSION}.jar"
+  file: "target/oss-configlint-${PROJECT_MAVEN_VERSION}-exec.jar"
   skip_cleanup: true
   on:
     tags: true
 
 after_deploy:
   - echo "deploy finished!"
-
-services:
-- docker
-sudo: required
