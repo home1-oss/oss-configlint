@@ -1,4 +1,4 @@
-package com.yirendai.oss.environment.configlint;
+package cn.home1.oss.environment.configlint;
 
 /**
  * Created by melody on 2016/11/9.

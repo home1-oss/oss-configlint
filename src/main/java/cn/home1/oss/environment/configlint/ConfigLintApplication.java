@@ -1,4 +1,4 @@
-package com.yirendai.oss.environment.configlint;
+package cn.home1.oss.environment.configlint;
 
 public class ConfigLintApplication {
 
