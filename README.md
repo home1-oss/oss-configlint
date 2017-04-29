@@ -14,7 +14,7 @@
 + 使用示例
 
 ```
-    java -jar oss-configlint-1.0.6.OSS-SNAPSHOT.jar $文件名列表
+    java -jar oss-configlint-1.0.6.OSS.jar $文件名列表
 ```  
 
 ## 推荐使用方式
@@ -27,13 +27,13 @@
 
 ```
     $ ls
-    application.yml  README.md  oss-configlint-1.0.6.OSS-SNAPSHOT.jar
+    application.yml  README.md  oss-configlint-1.0.6.OSS.jar
 ```  
 
 + 配置`git`的`pre-commit`。在项目根目录，编辑 `.git/hooks/pre-commit`, 加入如下内容：
 
 ```  
-    java -jar oss-configlint-1.0.6.OSS-SNAPSHOT.jar application.yml
+    java -jar oss-configlint-1.0.6.OSS.jar application.yml
 ```  
 
 保存之后，给刚才的`pre-commit`文件加入可执行权限。`chmod +x .git/hooks/pre-commit`。  
