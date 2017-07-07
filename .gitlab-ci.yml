@@ -40,7 +40,7 @@ on_non_release_push:
 on_release_push:
 #  artifacts:
 #    paths:
-#    - "**/build/libs/*.jar"
+#    - "**/target/*.jar"
   only:
   - /^release\/.+$/
   script:
