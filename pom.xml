@@ -7,7 +7,7 @@
     <parent>
         <groupId>cn.home1</groupId>
         <artifactId>oss-build</artifactId>
-        <version>1.0.11.OSS</version>
+        <version>1.0.15.OSS</version>
     </parent>
 
     <artifactId>oss-configlint</artifactId>
@@ -15,7 +15,7 @@
     <name>oss-configlint</name>
     <packaging>jar</packaging>
     <url>https://github.com/home1-oss/oss-configlint</url>
-    <version>1.0.7.OSS-SNAPSHOT</version>
+    <version>1.0.8.OSS-SNAPSHOT</version>
 
     <ciManagement>
         <system>Travis CI</system>
@@ -32,9 +32,9 @@
     </scm>
 
     <properties>
-        <spring-boot.version>1.4.1.RELEASE</spring-boot.version>
+        <oss-release.version>1.0.10.OSS-SNAPSHOT</oss-release.version>
+        <spring-boot.version>1.5.6.RELEASE</spring-boot.version>
         <start-class>cn.home1.oss.environment.configlint.ConfigLintApplication</start-class>
-        <oss-release.version>1.0.6.OSS</oss-release.version>
     </properties>
 
     <build>
